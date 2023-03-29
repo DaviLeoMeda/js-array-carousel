@@ -1,0 +1,12 @@
+.prev i,
+.next i {
+    cursor: pointer;
+}
+
+.pic.active {
+    display: block
+}
+
+.pic {
+    display: none
+}
