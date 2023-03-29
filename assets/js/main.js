@@ -12,6 +12,10 @@ next.addEventListener('click', function () {
     activeItem.classList.remove('active');
     itemToActive.classList.add('active');
 
+    if (activeItem.nextElementSibling.classList.contains('last')) {
+        activeItem.nextElementSibling.classList.contains('first').activeItem.nextElementSibling.classList.add('active');
+    }
+
 })
 
 prev.addEventListener('click', function () {
