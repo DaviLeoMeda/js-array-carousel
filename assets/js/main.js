@@ -9,13 +9,13 @@ next.addEventListener('click', function () {
 
     let itemToActive = activeItem.nextElementSibling;
 
-    activeItem.classList.remove('active');
-    itemToActive.classList.add('active');
 
-    if (activeItem.nextElementSibling.classList.contains('last')) {
-        activeItem.nextElementSibling.classList.contains('first').activeItem.nextElementSibling.classList.add('active');
+    if (activeItem.classList.contains('last')) {
+        itemToActive = document.querySelector('.pic.first');
     }
 
+    activeItem.classList.remove('active');
+    itemToActive.classList.add('active');
 })
 
 prev.addEventListener('click', function () {
@@ -25,6 +25,10 @@ prev.addEventListener('click', function () {
 
     itemToActive.classList.remove('active');
     activeItem.classList.add('active');
+
+    if (activeItem.classList.contains('first')) {
+        itemToActive = document.querySelector('.pic.last');
+    }
 
 })
 
